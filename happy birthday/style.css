@@ -1,0 +1,36 @@
+ /* Estilos para centrar el texto y parpadeo de fondo */
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    color: white;
+    background-color: #FF0000; /* Color inicial de fondo */
+    animation: blinkBackground 1s infinite;
+    overflow: hidden;
+}
+
+/* Animación de cambio de color de fondo */
+@keyframes blinkBackground {
+    0% { background-color: #FF0000; }
+    50% { background-color: #00FF00; }
+    100% { background-color: #0000FF; }
+}
+.confeti {
+position: absolute;
+width: 15px; /* Estilo rectangular */
+height: 5px; /* Estilo rectangular */
+opacity: 0.8;
+border-radius: 2px; /* Bordes ligeramente redondeados */
+animation: lanzar 2s ease-out infinite;
+}
+
+@keyframes lanzar {
+0% { transform: translateY(100vh) rotate(0deg); } /* Empieza desde abajo */
+50% { transform: translateY(-50vh) rotate(180deg); } /* Sube a la mitad */
+100% { transform: translateY(-100vh) rotate(360deg); } /* Llega hasta la parte superior */
+}
+
+
